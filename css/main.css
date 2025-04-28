@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -49,15 +51,21 @@ li {
     border-radius: 25px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.1s linear;
+    transition: color 0.1s linear, background 0.1s linear;
 }
 
 
 
 /* -- header -- */
 .header {
-    background: #f1f1f1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header .inner {
     position: relative;
+    background: #f1f1f1;
 }
 .header .logo .logo-img {
     float: left;
@@ -78,7 +86,7 @@ li {
     flex: 1;
     gap: 3%;
     font-weight: 700;
-    font-size: 1.25em ; /*20px*/
+    font-size: clamp(16px, 2vw, 20px); /*20px*/
 }
 .header .pc_display .nav-item a {
     transition: color 0.1s linear;
@@ -153,16 +161,62 @@ li {
     transition: all 0.2s ease-in-out;
 }
 
+
+
 /* -- main -- */
+.main {
+    padding-top: 96px;
+}
+/* -- main-visual -- */
+.main .main-visual {
+    width: 100%;
+    height: fit-content;
+}
 .main .main-visual .content {
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 }
-.main .main-visual .visual-txt {
+.main .main-visual .visual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .main-visual .img-box .free-btn {
     position: absolute;
-    top: 0;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
+    background: #12A1A2;
     color: #fff;
+    font-size: clamp(14px, 2vw, 18px);
+    border: none;
+}
+.main .main-visual .since-img {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main .main-visual .txt-box {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.main .main-visual .visual-txt .kor {
+    line-height: 180%;
+    font-size: clamp(15px, 2vw, 22px);
+    font-weight: 700;
+}
+.main .main-visual .visual-txt .eng {
+    line-height: 120%;
+    font-family: "Anek Bangla", sans-serif;
+    font-size: clamp(28px, 3vw, 48px);
+    font-weight: 900;
 }
 
 
@@ -177,7 +231,7 @@ li {
 }
 @media (max-width: 767px) {
     /* -- header -- */
-    .header {
+    .header .inner {
         background: #12A1A2;
     }
     .header .pc_display {
@@ -185,5 +239,9 @@ li {
     }
     .header .mob_display {
         display: flex;
+    }
+    /* -- main -- */
+    .main {
+        padding-top: 62px;
     }
 }
