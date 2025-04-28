@@ -170,7 +170,4 @@ li {
     .header .mob_display {
         display: flex;
     }
-    .header .mob_display .nav-container {
-        display: flex;
-    } 
 }
