@@ -13,6 +13,9 @@ li {
     font-family: "Pretendard Variable", sans-serif;
 }
 
+
+
+
 /* -- show & hide control componant -- */
 .block {
     display: block;
@@ -28,6 +31,12 @@ li {
 }
 .n-opacity {
     opacity: 0;
+}
+.x-100 {
+    transform: translateX(100%);
+}
+.x-0 {
+    transform: translateX(0%);
 }
 
 /* -- btn componant --*/
@@ -140,17 +149,18 @@ li {
     font-weight: 700;
     background: #f1f1f1;
     transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 1025px) {
-    /* header */
+    /* -- header -- */
     .header .pc_display .nav {
         justify-content: right;
         margin-right: 74px;
     }
 }
 @media (max-width: 767px) {
-    /* header */
+    /* -- header -- */
     .header {
         background: #12A1A2;
     }
@@ -160,4 +170,7 @@ li {
     .header .mob_display {
         display: flex;
     }
+    .header .mob_display .nav-container {
+        display: flex;
+    } 
 }
