@@ -180,19 +180,22 @@ li {
 .main .main-visual .visual-img {
     width: 100%;
     height: 100%;
+    float: left;
     object-fit: cover;
 }
-.main .main-visual .img-box .free-btn {
+.main .main-visual .img-box .free-btn-box {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
+}
+.main .main-visual .img-box .free-btn {
     background: #12A1A2;
     color: #fff;
     font-size: clamp(14px, 2vw, 18px);
     border: none;
 }
-.main .main-visual .since-img {
+.main .main-visual .since-box {
     position: absolute;
     bottom: 4%;
     left: 50%;
@@ -240,8 +243,36 @@ li {
     .header .mob_display {
         display: flex;
     }
+
     /* -- main -- */
     .main {
+        padding: 0 16px;
         padding-top: 62px;
     }
+
+    /* -- main-visual -- */
+    .main .main-visual .content {
+        padding-top: 8vw;
+        gap: 6vw;
+    }
+    .main .main-visual .img-box {
+        position: relative;
+        border-radius: 22px;
+        overflow: hidden;
+    }
+    .main .main-visual .img-box .free-btn-box {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .main .main-visual .since-box {
+        left: auto;
+        right: 2%;
+        transform: scale(0.7);
+    }
+    .main .main-visual .txt-box {
+        position: static;
+        transform: none;
+        color: #141414;
+    }
+    
 }
