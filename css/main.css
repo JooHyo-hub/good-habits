@@ -39,6 +39,7 @@ li {
     transform: translateX(0%);
 }
 
+
 /* -- btn componant --*/
 .btn {
     padding: 8px 20px;
@@ -151,6 +152,21 @@ li {
     transform: translateX(100%);
     transition: all 0.2s ease-in-out;
 }
+
+/* -- main -- */
+.main .main-visual .content {
+    position: relative;
+}
+.main .main-visual .visual-txt {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+
+
 
 @media (max-width: 1025px) {
     /* -- header -- */
